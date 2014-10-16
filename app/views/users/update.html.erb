@@ -1,0 +1,16 @@
+<h1>Update users info</h1>
+
+    <%= form_for @user do |f| %>
+        Name: <%= f.text_field :name %><br>
+        Email: <%= f.text_field :email %><br>
+        Email-confirmation: <%= f.text_field :email_confirmation %><br>
+        Password: <%= f.password_field :password %><br>
+        Password-confirmation: <%= f.password_field :password_confirmation %><br>
+
+
+        <%= f.submit "Update user info!" %><br><br>
+
+    <% end %>
+
+    <%= link_to "Back to the list!", users_path %>
+  </div>

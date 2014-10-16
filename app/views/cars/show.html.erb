@@ -1,0 +1,35 @@
+
+
+    <div class="show">
+    <h1>Car Details!</h1>       
+    <div class="table-responsive">
+    <table class="table table-hover">
+        <tr class="info">
+              <th>Make </th>
+              <th>Model</th>
+              <th>Year</th>
+              <th>Trim</th>
+              <th>Mileage</th>
+              <th>Transmission</th>
+              <th>Color</th>
+              <th>Title</th>
+              <th></th>
+        </tr>
+        <tr class="active">
+            <td><%= @car.make %></td>
+            <td><%= @car.model %></td>
+            <td><%= @car.year %></td>
+            <td><%= @car.trim %></td>
+            <td><%= @car.mileage %></td>
+            <td><%= @car.transmission %></td>
+            <td><%= @car.color %></td>
+            <td><%= @car.title %></td>
+            <td> <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
+            </td>
+        </tr>
+   </table>
+
+    </div>
+</div>
+              
+           <%= link_to "Back to the list!", cars_path %>  

@@ -1,0 +1,27 @@
+<h1>Edit car info.</h1>
+<div class="row">
+  <div class="span2 offsets6">
+<%= form_for @car do |f| %>
+        <%= f.label :make %> 
+        <%= f.text_field :make %>
+        <%= f.label :model %>
+         <%= f.text_field :model %>
+        <%= f.label :year %> 
+        <%= f.text_field :year %>
+        <%= f.label :trim %> 
+         <%= f.text_field :trim %>
+        <%= f.label :mileage %> 
+        <%= f.text_field :mileage %>
+        <%= f.label :transmission %>  
+        <%= f.text_field :transmission %>
+        <%= f.label :color %>  
+        <%= f.text_field :color %>
+        <%= f.label :title %>  
+        <%= f.text_field :title %>
+
+    <%= f.submit "Edit car details!" %>      
+    
+<% end %>
+</div>
+</div>
+<%= link_to "Back to the list!", cars_path %>

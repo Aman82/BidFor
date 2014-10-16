@@ -1,0 +1,72 @@
+<nav class="top-bar" data-topbar role="navigation">
+      <ul class="title-area">
+        <li class="name">
+          <h1> <%= link_to "Car-pinoio", polls_path %></h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+ 				<ul class="right">
+                    <% if current_user %>
+
+                    <li class="active">
+                    <%= link_to @current_user.username, @current_user %></li>
+
+                    <li class="divider"></li>
+
+                    <li class="active">
+                    <%= link_to "Log Out", signout_path, method: 'delete'  %></li>
+                    
+                    <% else %>
+
+                    <li class="active">
+                    <%= link_to "Sign up", '/users/new' %></li>
+
+                    <li class="divider"></li>
+
+                    <li class="active">
+                        <a data-reveal-id="myModal" href="#">Sign in</a>
+
+                        <div class="tiny reveal-modal" data-reveal="" id="myModal">
+                            <h2 style="text-align: center;"> Sign In ! </h2>
+                            <%= form_for(:session, url: sessions_path, data: {abide: ""}) do |f| %>
+                            
+                            <div class="email-field">
+                                <label>Email
+                                <%= f.text_field :email, placeholder: 'Email', required:"", id: "email", pattern: "email" %>
+                                <small class="error">Enter your email address.</small>
+                            </div>
+
+                            <div class="password-field">
+                                <label>Password
+                                <%= f.password_field :password, placeholder: 'Password', required:"", id: "password" %>
+                                <small class="error">Enter your password.</small>
+                            </div>
+                            <%= f.submit "Sign In!", class: "button"%>  <%= link_to "New User", '/users/new' %>
+                            <% end %>
+                        </div>
+                    </li><% end %>
+            </a>
+            <a href="#">Menu</a>
+            <ul class="dropdown">
+            <li class="active">
+              <% if current_user %>
+                <%= link_to "Profile", @current_user %>
+              <% else %>
+                <%= link_to "Sign up", 'users/new' %></li>
+              <% end %>
+               <li><%= link_to "Checkout Cars", cars_path %></li>
+              <li class="active"><%= link_to "Opinion Poll", root_path %></li>
+              <li class="active"><%= link_to "About Us", polls_path %></li>
+               <li><a href="http://pollmakers.com/loadvb.wr?Keyword=Opinion_Polls&AdGroup=Surveys&Matchtype=EXACT&GoogleID=13693758163&gclid=CjwKEAjw2MOhBRCq-Nr87_j-lDASJAAl4FNhMKS2qYCjTkmF-4BsA7N5AdmWQEVrBdlTCutNdzQbBxoC_Uzw_wcB">How it Works</a></li>
+            </ul>
+          </li>
+      </ul>
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+    </ul>
+  </section>
+</nav>

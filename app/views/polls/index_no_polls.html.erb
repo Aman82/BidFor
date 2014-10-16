@@ -1,0 +1,127 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= content_for?(:title) ? yield(:title) : "Car-pinion" %></title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+
+<div class="row">
+  <div class="large-12 columns">
+    <h1>Welcome to Car-pinion</h1>
+  </div>
+  <hr />
+
+  <ul id="featured1" class="orbit" data-orbit>
+  <li>
+    <img src="../assets/camaro.jpg" alt="slide 1" height="440" width="600" />
+    <div class="orbit-caption">
+      2014 Chavorlet Camaro
+    </div>
+  </li>
+  <li class="active">
+    <img src="../assets/charger.jpg" alt="slide 2" height="440" width="600" />
+    <div class="orbit-caption">
+      2012 Dodge Charger
+    </div>
+  </li>
+  <li>
+    <img src="../assets/farrari.jpg" alt="slide 3" height="220" width="700" />
+    <div class="orbit-caption">
+      2013 Farrari
+    </div>
+  </li>
+   <li class="active">
+    <img src="../assets/Lamborghini.jpg" alt="slide 4" height="440" width="600" />
+    <div class="orbit-caption">
+      2012 Lamborghini
+    </div>
+  </li>
+   <li class="active">
+    <img src="../assets/peugeot.jpg" alt="slide 5" height="440" width="600" />
+    <div class="orbit-caption">
+      2011 Peugeot.
+    </div>
+  </li>
+</ul>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    <div class="panel">
+    <h3><%= link_to 'Create a new Poll', new_poll_path %></h3>
+    <% @polls.each do |poll| %>
+    <h3>
+      <% if poll.has_been_voted_on_by(current_user) %>&#x2713;
+      <% end %>
+      <%= link_to poll.question, poll %>
+      <% end %>
+    </h3>
+    <label>cars or trucks</label>
+    <div class="row">
+      <div class="large-12 columns">
+        <select>
+          <option value="Location">According to Location</option>
+          <option value="Make">According to Make</option>
+          <option value="Year">According to Year</option>
+          <option value="Owner">Owner</option>
+          <option value="Dealer">Dealer</option>
+        </select>
+      </div>
+    </div>
+        <div class="small round button">Find Vehicle!
+          <%= render 'layouts/navbar.html.erb' %>
+        </div>
+    </div>
+   </div>
+  </div>
+    
+
+<div class="row">
+    <div class="large-12 columns">
+      <div class="panel">
+        <h4>Get in touch!</h4>  
+        <div class="row">
+          <div class="large-9 columns">
+            <p>We'd love to hear from you.</p>
+          </div>
+          <div class="large-3 columns">
+            <a href="https://www.gmail.com" class="radius button right">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="row">
+    <div class="large-12 columns">
+      <hr/>
+      <div class="row">
+        <div class="large-6 columns">
+          <p>© Copyright reserved by Car-pinion.</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="https://www.facebook.com/">Follow on Facebook</a></li>
+            <li><a href="https://twitter.com/login">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+            <li><a href="https://plus.google.com/">Google+</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </footer>
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
