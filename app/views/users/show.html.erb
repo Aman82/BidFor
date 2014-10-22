@@ -2,13 +2,13 @@
     <div class="table-responsive">
       <table class="table table-hover">
           <tr class="info">
-      <p><%= image_tag @user.avatar.url(:thumb) %></p>
               <th>UserName</th>
               <th> E-mail ID</th>
               <th></th>
               <th></th>
           </tr>
           <tr class="active">
+               <p><%= image_tag @user.avatar.url(:thumb) %></p>
               <td><%= @user.username %></td>
               <td><%= @user.first_name %></td>
               <td><%= @user.last_name %></td>

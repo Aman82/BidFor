@@ -1,32 +1,64 @@
 
-<div class="large-4 columns">.</div>
+<div class="large-4 columns">
+    <%= render 'shared/errors' %>
+</div>
+
 <div class="large-4 columns">
 <h1>Sign Up!</h1>
-<%= form_for @user do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %><br>
 
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %><br>
+<%= form_for @user, data: {abide: ""} do |f| %>
 
-    <%= f.label :email %>
-    <%= f.text_field :email %><br>
+  <div class="name-field">
+    <label>Username <small>required</small>
+    <%= f.text_field :username, placeholder: 'Username', required:"" %>
+    <small class="error">Username is required.</small>
+  </div>
 
-    <%= f.label :email_confirmation %>
-    <%= f.text_field :email_confirmation %><br>
+  <div class="name-field">
+    <label>First Name <small>required</small>
+    <%= f.text_field :first_name, placeholder: 'First Name', required:""  %>
+    <small class="error">First name is required.</small>
+  </div>
 
-    <%= f.label :password %>
-    <%= f.password_field :password %><br>
+  <div class="name-field">
+    <label>Last Name <small>required</small>
+    <%= f.text_field :last_name, placeholder: 'Last Name', required:""  %>
+    <small class="error">Last name is required.</small>
+  </div>
 
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %><br>
+  <div class="email-field">
+    <label>Email <small>required</small>
+    <%= f.text_field :email, placeholder: 'Email', required:"", id: "theemail", pattern: "email" %>
+    <small class="error">An email address is required.</small>
+  </div>
 
-    <%= f.label : upload your picture %>
+
+  <div class="email-field">
+    <label>Confirm Email <small>required</small>
+    <%= f.text_field :email_confirmation, placeholder: 'Confirm your email', required: "", data: {equalto: "theemail"}, pattern: "email"  %>
+    <small class="error">Email did not match.</small>
+  </div>
+
+  <div class="password-field">
+    <label>Password <small>required</small>
+    <%= f.password_field :password, placeholder: 'Password', required:"", id: "thepassword" %>
+    <small class="error">A password is required.</small>
+  </div>
+
+  <div class="password-confirmation-field">
+    <label>Confirm Password <small>required</small>
+    <%= f.password_field :password_confirmation, placeholder: 'Confirm your password', required: "", data: {equalto: "thepassword"} %>
+    <small class="error">Password did not match</small>
+  </div>
+  <div class="picture-field">
+  <label>Upload picture<small>required</small>
     <%= f.file_field :avatar %>
 
-    <%= f.submit "Sign Me Up!" %> 
-<% end %>
+
+ <%= f.submit "Sign Me Up!", class: 'button' %> 
+ <% end %>
 </div>
-<div class="large-4 columns">
-.
+
+
+<div class="large-4 columns">.
 </div>

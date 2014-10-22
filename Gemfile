@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# For Heroku
+gem 'rails_12factor', group: :production
+gem 'passenger'
+
 # Foundation Looks More Professional
 gem 'foundation-rails'
 
@@ -52,5 +56,8 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'factory_girl_rails'
+  gem "capybara"
+  gem "database_cleaner"
+  gem 'selenium-webdriver'
 end
 

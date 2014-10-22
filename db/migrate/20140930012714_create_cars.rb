@@ -9,7 +9,9 @@ class CreateCars < ActiveRecord::Migration
       t.string :transmission
       t.string :color
       t.string :title
-
+      t.string :avatar_file_name
+      t.string :avatar_content_type
+      t.integer :avatar_file_size
       t.timestamps
     end
   end

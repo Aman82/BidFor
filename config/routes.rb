@@ -1,24 +1,30 @@
 Rails.application.routes.draw do
-
 root 'polls#index'
 
-
-#resources :sessions
-  get '/login' => 'sessions#new', as: :sessions
-  post '/login' => 'sessions#create' 
-  get 'sessions/index' => 'sessions#index'
-  delete 'signout/' => 'sessions#destroy', as: :signout
-    
+  resources :sallers
+  resources :sales
+  resources :bids
+  resources :items
   resources :users
   resources :cars
+  resources :polls 
+
   resources :polls do
     resources :user_polls
   end
 
-
   scope "api", defaults: {format: "json"} do 
     resources :cars, :polls
   end
+
+
+
+#resources :sessions
+  get 'sessions/index' => 'sessions#index'
+  get 'signin/' => 'sessions#new', as: :sessions
+  post 'signin/' => 'sessions#create'
+  delete 'signout/' => 'sessions#destroy', as: :signout
+     
 
 # # USER RESOURCES
 #   get '/users/' => 'users#index'
@@ -32,13 +38,13 @@ root 'polls#index'
 # # VEHICLE RESOURCES
 #   get 'cars/' => 'cars#index'
 #   post 'cars/' => 'cars#create'
-#   #get 'cars/:id/edit' => 'cars#edit', as: :edit_car
+#   get 'cars/:id/edit' => 'cars#edit', as: :edit_car
 #   patch 'cars/:id' => 'cars#update'
 #   delete '/cars/:id' => 'cars#destroy'
 
 # # POLLS RESOURCES
-#   # get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
-   get 'polls/index'
+#   get 'vote/:answer_id', to: 'polls#vote', as: :vote_on_poll
+   #get 'polls/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

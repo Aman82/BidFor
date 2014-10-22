@@ -3,12 +3,12 @@ class CarsController < ApplicationController
 respond_to :html, :json
   def index
       @cars = Car.all
-      respond_to @cars
+      # respond_to @cars
   end
 
   def new
        @car = Car.new
-       @poll = Poll.find(params[:id])
+       # @poll = Poll.find(params[:id])
   end
 
   def show
@@ -27,7 +27,7 @@ respond_to :html, :json
 
   def edit
         @car = Car.find(params[:id])
-        @poll = Poll.find(params[:id])
+        # @poll = Poll.find(params[:id])
   end
 
   def update

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= content_for?(:title) ? yield(:title) : "Car-pinion" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "BidFor" %></title>
     <link rel="stylesheet" href="css/foundation.css" />
     <script src="js/vendor/modernizr.js"></script>
     <%= stylesheet_link_tag    "application" %>
@@ -15,37 +15,37 @@
 
 <div class="row">
   <div class="large-12 columns">
-    <h1>Welcome to Car-pinion</h1>
+    <h1>Bid-For</h1>
   </div>
   <hr />
 
   <ul id="featured1" class="orbit" data-orbit>
   <li>
-    <img src="../assets/camaro.jpg" alt="slide 1" height="440" width="600" />
+    <img src="../assets/camaro.jpg" alt="slide 1" height="250px" width="1020px" />
     <div class="orbit-caption">
       2014 Chavorlet Camaro
     </div>
   </li>
   <li class="active">
-    <img src="../assets/charger.jpg" alt="slide 2" height="440" width="600" />
+    <img src="../assets/charger.jpg" alt="slide 2" height="250px" width="1020px" />
     <div class="orbit-caption">
       2012 Dodge Charger
     </div>
   </li>
   <li>
-    <img src="../assets/farrari.jpg" alt="slide 3" height="220" width="700" />
+    <img src="../assets/farrari.jpg" alt="slide 3" height="250px" width="1020px" />
     <div class="orbit-caption">
       2013 Farrari
     </div>
   </li>
    <li class="active">
-    <img src="../assets/Lamborghini.jpg" alt="slide 4" height="440" width="600" />
+    <img src="../assets/Lamborghini.jpg" alt="slide 4" height="300px" width="1020px" />
     <div class="orbit-caption">
       2012 Lamborghini
     </div>
   </li>
    <li class="active">
-    <img src="../assets/peugeot.jpg" alt="slide 5" height="440" width="600" />
+    <img src="../assets/peugeot.jpg" alt="slide 5" height="300px" width="1020px" />
     <div class="orbit-caption">
       2011 Peugeot.
     </div>
@@ -76,7 +76,6 @@
       </div>
     </div>
         <div class="small round button">Find Vehicle!
-          <%= render 'layouts/navbar.html.erb' %>
         </div>
     </div>
    </div>
@@ -92,30 +91,13 @@
             <p>We'd love to hear from you.</p>
           </div>
           <div class="large-3 columns">
-            <a href="https://www.gmail.com" class="radius button right">Contact Us</a>
+            <a href="http://www.bidfor.com" class="radius button right">Contact Us</a>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <footer class="row">
-    <div class="large-12 columns">
-      <hr/>
-      <div class="row">
-        <div class="large-6 columns">
-          <p>© Copyright reserved by Car-pinion.</p>
-        </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="https://www.facebook.com/">Follow on Facebook</a></li>
-            <li><a href="https://twitter.com/login">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/">Linkedin</a></li>
-            <li><a href="https://plus.google.com/">Google+</a></li>
-          </ul>
-        </div>
-      </div>
-    </div> 
-  </footer>
+  
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/foundation.min.js"></script>

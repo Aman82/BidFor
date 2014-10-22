@@ -6,20 +6,27 @@
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
     
   <body>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
- <div class="fixed">
-  <%= render 'layouts/navbar.html.erb' %>
-  </div>
-  <% if flash[:notice] %>
-    <p>
-        <%= flash[:notice] %>
-    </p>
-  <% end %>
-    <%= yield %>
-    <%= javascript_include_tag "application" %>
+    <div class="large-12 columns">
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+        <div class="fixed">
+          <%= render 'layouts/navbar.html.erb' %>
+        </div>
+          <% if flash[:notice] %>
+            <p>
+            <%= flash[:notice] %>
+            </p>
+          <% end %>
+          <%= yield %>
+    </div>
   </body>
+    <footer class="row">
+          <hr/>
+        <%= render 'layouts/footer.html.erb' %>
+      </div>
+    </footer>
 </html>

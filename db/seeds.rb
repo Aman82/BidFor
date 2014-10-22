@@ -14,8 +14,7 @@ users = User.create([
     email: 'alex@ga.com',
     email_confirmation: 'alex@ga.com',
     password: 'alexeverything',
-    password_confirmation: 'alexeverything',
-    phone_number: '310-787-9900',
+    password_confirmation: 'alexeverything'
   },
   {
     first_name: 'Dan',
@@ -24,8 +23,7 @@ users = User.create([
     email: 'dan@ga.com',
     email_confirmation: 'dan@ga.com',
     password: 'daneverything',
-    password_confirmation: 'daneverything',
-    phone_number: '310-787-8800',
+    password_confirmation: 'daneverything'
   }
   ]);
 

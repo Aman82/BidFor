@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141001213203) do
+ActiveRecord::Schema.define(version: 20141022000409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "answers", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "bids", force: true do |t|
+    t.string   "timestamp"
+    t.float    "bid_amount"
+    t.float    "bid_change"
+    t.string   "bid_fee"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,7 +43,40 @@ ActiveRecord::Schema.define(version: 20141001213203) do
     t.datetime "updated_at"
   end
 
+  create_table "items", force: true do |t|
+    t.string   "item_name"
+    t.string   "item_status"
+    t.float    "asking_price"
+    t.float    "notify_price"
+    t.datetime "listing_date"
+    t.datetime "expiration_date"
+    t.text     "description"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "polls", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sales", force: true do |t|
+    t.string   "winning_bid"
+    t.boolean  "seller_approval"
+    t.boolean  "buyer_acceptance"
+    t.datetime "completion_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sallers", force: true do |t|
+    t.string   "items_listed"
+    t.string   "items_active"
+    t.string   "last_activity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -45,7 +87,10 @@ ActiveRecord::Schema.define(version: 20141001213203) do
     t.string   "username"
     t.string   "email"
     t.string   "password_digest"
-    t.string   "phone_number"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

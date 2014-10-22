@@ -1,0 +1,128 @@
+<div class="row">
+<div class="large-4 columns">
+   <p> ©bidfor All rights reserved 2014</p>
+<div class="cblt-content">
+  <ul>
+    <li><span class="label sales">Sales:</span><span class="content">(650) 575-0453</span></li>
+    <li><span class="label service">Service:</span><span class="content">(510) 449-7694</span></li>
+    <li><span class="label email">Email:</span><span class="content"><a href="about.html.erb" target="_top">Contact Us</a></span></li>
+  </ul>
+  </div>
+  </div>
+      <div class="large-4 columns">
+        <section data-tile="flex-tile" class="cblt-panel chrome flex-tile map-widget   layout"
+            data-theme="layout" data-map-type="" data-zoom-level="" tabindex="0" aria-labelledby="Map_Tile1407422569-header">
+            <header>
+                <p class="h1" id="Map_Tile1407422569-header">Map and Directions</p>
+            </header>
+                <div class="widget-map"></div>
+            <footer>
+               
+            </footer>
+
+            <a class="map-tile-anchor-no-address" href="DrivingDirections?cs:a:i=map_widget" ></a>
+            </section>
+        </div>
+    <div class="large-4 columns">
+        <ul class="inline-list right">
+          <li><a href="https://www.facebook.com/">Facebook</a></li>
+          <li><a href="https://twitter.com/login">Twitter</a></li>
+          <li><a href="https://www.linkedin.com/">Linkedin</a></li>
+          <li><a href="https://plus.google.com/">Google+</a></li>
+        </ul>
+    </div> 
+<!-- Toolbar Implementation Instructions:                                                                        --> 
+<!-- This code may be placed in a global header or footer, or on each individual page if no global space exists. --> 
+<!-- The toolbar will always display at the bottom of the page so placement in the source code will not matter.  --> 
+ <script src="http://toolbar.contactatonce.com/ToolbarGenerator.aspx?Merchantid=256537&Providerid=10329" type="text/javascript"></script>
+ <!--Site Visitor Tracking Script Begins Here                                                        -->  
+ <!--The below script should be included in all site pages for which site visitor tracking is desired-->  
+ <!--The script should be placed immediately before the close html tag.  -->
+ <!--The script may be placed in a footer that is shared across the site.--> 
+
+
+  <script type="text/javascript">document.write('<img style="display:none" src="http://context.contactatonce.com/MaintainContext.aspx?referrer=' + encodeURIComponent(document.referrer) + '" />');</script>  
+
+      <!--Site Visitor Tracking Script Ends Here-->   
+</div>
+        <script type="text/javascript">
+            jQuery(function($) {
+                //
+                //
+                //
+                    jQuery('#flexible-dealer-footer').flexsort({
+                        allowSorting: false
+                    });  
+            });
+        </script>          
+
+<script type="text/javascript" src="http://video.dmotorworks.com/video/COBALT/rta.js"></script>
+<script type="text/javascript" src="http://assets.cobaltnitra.com/websites/generated/bundles/80b3473aec78938b/7f73e58679fd455e/5hg/rfwdqrwnh1v-tnuoe6q==/bundle.js"></script>
+<script type="text/javascript">
+
+   jQuery(window).load(function() {
+    var onLoadHandler = "onload=\"jQuery(window).trigger('backgroundCSSLoaded');\"";
+    var link = "<link rel='stylesheet' type='text/css' " + onLoadHandler + " href='http://assets.cobaltnitra.com/websites/4.14.10.3-c830538/websitesEar/websitesWebApp/designs/Capella/features/backgrounds/none.css'  />";
+    jQuery("head").append(link);
+   });
+                            
+
+function LoadBackgroundCssRules(){
+        var cssStyle = "<style type=\"text/css\">.bg-custom-image { background-image: url(features/backgrounds/none.png);}body.bg-custom-image.is-ie7 img.pageBackgroundFallback,body.bg-custom-image.is-ie8 img.pageBackgroundFallback{background-image: url(features/backgrounds/none.png);}</style>";
+         jQuery("head").append(cssStyle);
+        jQuery(window).trigger('backgroundCSSLoaded');
+}
+LazyLoader.call(function(){LoadBackgroundCssRules();});
+
+
+jQuery(document).ready(function(){
+  
+  var browserversion = parseInt(jQuery.browser.version, 10),
+    pageBody = jQuery("body");
+      
+  function exeBackgroundCssFallback(){
+    var src,
+      imgPageBackgroundFallback = jQuery("img.pageBackgroundFallback");
+      pageBody.addClass("is-ie"+browserversion);
+      src = imgPageBackgroundFallback.css("background-image");
+      src = src.replace('url("','').replace('")','');
+      imgPageBackgroundFallback.attr("src", src);
+  }
+  
+  jQuery(window).one('backgroundCSSLoaded', function(e) {
+    if(jQuery.browser.msie && browserversion < 9) {
+      exeBackgroundCssFallback();
+    }     
+    });
+    
+    if(jQuery.browser.msie && browserversion < 9) {
+    exeBackgroundCssFallback();
+  }
+});
+
+
+(function() {
+    var loadMap = function() {
+        var props = {
+          widgetId: 'Map_Tile1407422569',
+          marker: 'http://assets.cobaltnitra.com/websites/widgetsv/4.14.10.3-c830690/widgets/Map%20Tile/pin.png', 
+          zoomLevel:'$config.zoomLevel.value',
+          mapType: '$config.mapType.value',
+          currentTheme: 'layout',
+          signedMapUrl : 'https://maps.googleapis.com/maps/api/staticmap?zoom=14&maptype=street&language=en&markers=31.086%2C-97.707&size=298x175&client=gme-cobalt&sensor=false&signature=4IcpETDKTTHjaTPWggs0jV_pbUY=',
+           assetsPlaceHolder : 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='
+    },
+         map = new MapTileWidget(props);
+        map.init();
+        if(jQuery().resizableWidget) {jQuery('#Map_Tile1407422569 .map-widget').resizableWidget(['flex-width-4','flex-width-8'],['flex-height-2','flex-height-4']);}
+    };
+
+    if (typeof MapTileWidget !== 'function') {
+        jQuery(window).one('MapTileWidgetLoaded', loadMap);
+    } else {
+        loadMap();
+    }
+}());
+
+<!-- Button Search Area -->
+
