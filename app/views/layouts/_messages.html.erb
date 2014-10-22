@@ -11,8 +11,8 @@
 
 
 <div class="banner">
-  <div id="logo">Welcome to Explorio
-    <div id="sub_logo">Learn Something New!</div>
+  <div id="logo">Welcome to BidFor
+    <div id="sub_logo">New Auctions!</div>
   </div>
 </div>
 
@@ -21,7 +21,7 @@
 var width = $('.banner').width(),
     height = $('.banner').height();
 
-$.get('/api/interests').then(function(data){
+$.get('/api/auctions').then(function(data){
 
 var nodes = d3.range(data.length)
 

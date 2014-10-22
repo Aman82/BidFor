@@ -1,2 +1,33 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<% @cars.each do |car| %>
+
+        <div class="large-12 columns car_module" id=
+        '<%= car.make.downcase + " " + car.model.downcase + " " + car.year.downcase %>'>
+        <ul>
+            <li>
+                <div class="large-6 columns">
+                    <%= link_to car.make, car %><br>
+                    <!-- <%= car.status %><br/> -->
+                     <!-- <div class="row"> -->
+                     <%= car.year %><br>
+                    <strong>Year:</strong> <%= car.model %> 
+                    <!-- </div> -->
+                </div>
+
+                <div class="large-6 columns">
+                    <%= car.start_date.to_s(:short) %> | <%= car.end_date.to_s(:short) %></br>
+                    <%= car.avatar %>
+                </div>
+            </li>
+
+            <li style="list-style: none; display: inline">
+                <div class="large-6 columns">
+                    <span class="label secondary"><%= link_to 'Show me More', car %></span>
+                </div>
+            </li>
+        </ul>
+        </div><% end %>
+
+        <div class="large-4 small-3 columns">
+            <%= link_to 'Create a New car +', curriculums_path, class:"tiny button expand" %>
+        </div>
+    </div>

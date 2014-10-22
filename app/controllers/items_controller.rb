@@ -4,29 +4,32 @@ class ItemsController < ApplicationController
   end
 
   def new
-    @items = Item.new
+    @item = Item.new
   end
 
   def show
-    @items = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 
   def create
-    @items = Item.new(require_params)
+    @item = Item.new(params.require(:item).permit(:item_name, :item_status, :asking_price, :notify_price, :listing_date, :expiration_date, :description, :avatar))
     if @item.save
       redirect_to @item
+        flash[:notice] = "New Item Created!"
     else
       render new
     end
   end
 
+  
+   
   def edit
     @item = Item.find(params[:id])
   end
 
   def update
     @item = Item.find(params[:id])
-      if @item.update_attributes(require_params)
+      if @item.update_attributes(params.require(:item).permit(:item_name, :item_status, :asking_price, :notify_price, :listing_date, :expiration_date, :description, :avatar))
         redirect_to @item
       else
         render 'edit'
@@ -45,7 +48,7 @@ class ItemsController < ApplicationController
   private
 
   def require_params
-    params.require(:item).permit(:item_name, :item_status, :acking_price, :notify_price, :expiration_date, :description, :avatar)
+    (params.require(:item).permit(:item_name, :item_status, :asking_price, :notify_price, :listing_date, :expiration_date, :description, :avatar))
   end
 
 end

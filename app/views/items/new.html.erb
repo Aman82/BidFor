@@ -1,2 +1,40 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+
+<div class="large-4 columns">.
+</div>
+
+<div class="large-4 columns">
+<h1>Add New Item!</h1>
+
+      <%= form_for(@item) do |i| %>
+
+      <%= i.label :Item_Name %>
+      <%= i.text_field :item_name, class: 'form-control' %>
+
+      <%= i.label :Status %>
+      <%= i.text_field :item_status, class: 'form-control' %>
+
+      <%= i.label :Asking %>
+      <%= i.text_field :asking_price, class: 'form-control' %>
+
+	  <%= i.label :Notify %>
+      <%= i.text_field :notify_price, class: 'form-control' %>
+
+	  <%= i.label :Listed_On %>
+      <%= i.text_field :listing_date, class: 'form-control' %>
+
+	  <%= i.label :Expiration_On %>
+      <%= i.text_field :expiration_date, class: 'form-control' %>
+
+	  <%= i.label :Description %>
+      <%= i.text_field :description, class: 'form-control' %>
+ 
+ 	  <div class="picture-field">
+      <label>Upload picture<small>required</small>
+      <%= i.file_field :avatar %>
+	  
+      <%= i.submit "Add Item", class: "btn btn-primary" %>
+      <% end %>
+ 
+</div>
+<div class="large-4 columns">.
+</div>

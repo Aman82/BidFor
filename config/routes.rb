@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'forget/index'
+
 root 'polls#index'
 
   resources :sallers

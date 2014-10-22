@@ -25,6 +25,7 @@
                     <li class="active">
                     <%= link_to "Sign up", '/users/new' %></li>
 
+
                     <li class="divider"></li>
 
                     <li class="active">
@@ -45,7 +46,7 @@
                                 <%= f.password_field :password, placeholder: 'Password', required:"", id: "password" %>
                                 <small class="error">Enter your password.</small>
                             </div>
-                            <%= f.submit "Sign In!", class: "button"%>  <%= link_to "New User", '/users/new' %>
+                            <%= f.submit "Sign In!", class: "button"%>  <%= link_to "New User!", 'users/new' %>||<%= link_to "Forget Password", 'forget/index' %>
                             <% end %>
                         </div>
                     </li><% end %>
