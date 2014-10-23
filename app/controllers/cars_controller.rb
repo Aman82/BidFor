@@ -17,7 +17,7 @@ respond_to :html, :json
   end
  
   def create
-     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title, :avtar))
+     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title, :avatar))
      if @car.save
           redirect_to @car
      else
@@ -32,7 +32,7 @@ respond_to :html, :json
 
   def update
       @car = Car.find(params[:id])
-      if @car.update_attributes(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :transmission, :color, :title, :avtar))
+      if @car.update_attributes(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :transmission, :color, :title, :avatar))
           redirect_to @car
       else
           render 'edit'
@@ -47,6 +47,6 @@ respond_to :html, :json
   private
 
   def required_params
-    params.require(:car).permit(:make, :model, :year, :trim, :mileage, :transmission, :color, :title, :avtar)
+    params.require(:car).permit(:make, :model, :year, :trim, :mileage, :transmission, :color, :title, :avatar)
   end
 end

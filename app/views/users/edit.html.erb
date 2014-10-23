@@ -3,8 +3,8 @@
     <h1> Edit User! </h1>
     <div class="row">
      <div class="large-4 columns">
-<% provide(:title, "Edit User") %>
-    <%= form_for @user do |f| %>
+        <% provide(:title, "Edit User") %>
+        <%= form_for @user do |f| %>
         FirstName: <%= f.text_field :first_name %>
         LastName: <%= f.text_field :last_name %>
         Email: <%= f.text_field :email %>

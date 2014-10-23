@@ -1,33 +1,37 @@
-<% @cars.each do |car| %>
 
-        <div class="large-12 columns car_module" id=
-        '<%= car.make.downcase + " " + car.model.downcase + " " + car.year.downcase %>'>
-        <ul>
-            <li>
-                <div class="large-6 columns">
-                    <%= link_to car.make, car %><br>
-                    <!-- <%= car.status %><br/> -->
-                     <!-- <div class="row"> -->
-                     <%= car.year %><br>
-                    <strong>Year:</strong> <%= car.model %> 
-                    <!-- </div> -->
-                </div>
+<div><%= link_to "Register for new item", new_item_path %></div>
+    
+<div class="show">
+    <h1>Items!</h1>       
+    <div class="table-responsive">
+    <table class="table table-hover">
+        <tr class="info">
+              <th>Name </th>
+              <th>Status</th>
+              <th>Asking</th>
+              <th>Notify</th>
+              <th>Listing_On</th>
+              <th>Expiration_On</th>
+              <th>Description</th>
+        </tr>
 
-                <div class="large-6 columns">
-                    <%= car.start_date.to_s(:short) %> | <%= car.end_date.to_s(:short) %></br>
-                    <%= car.avatar %>
-                </div>
-            </li>
+      <% @items.each do |i| %>
 
-            <li style="list-style: none; display: inline">
-                <div class="large-6 columns">
-                    <span class="label secondary"><%= link_to 'Show me More', car %></span>
-                </div>
-            </li>
-        </ul>
-        </div><% end %>
+        <tr class="active">
+            <td><%= i.item_name %></td>
+            <td><%= i.item_status %></td>
+            <td><%= i.asking_price %></td>
+            <td><%= i.notify_price %></td>
+            <td><%= i.listing_date %></td>
+            <td><%= i.expiration_date %></td>
+            <td><%= i.description %></td>
+            <td><%= link_to "Show", item_path(i) %></td>
+            <td><%= link_to "Edit", edit_item_path(i) %>     </td>      
+            <td><%= link_to "Delete", i, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+   
+ <% end %>
+   </table>
 
-        <div class="large-4 small-3 columns">
-            <%= link_to 'Create a New car +', curriculums_path, class:"tiny button expand" %>
-        </div>
     </div>
+</div>

@@ -1,2 +1,37 @@
-<h1>Items#create</h1>
-<p>Find me in app/views/items/create.html.erb</p>
+<div class="large-4 columns">.</div>
+<div class="large-4 columns">
+<h2>Item Detail Form!</h2>
+
+<%= form_for @car do |i| %>
+
+     <%= i.label :item_name %><br>
+     <%= i.text_field :item_name %><br>
+
+     <%= i.label :item_status %><br>
+     <%= i.text_field :item_status %><br>
+
+     <%= i.label :asking_price %><br>
+     <%= i.text_field :asking_price %><br>
+
+     <%= i.label :notify_price %><br>
+     <%= i.text_field :notify_price %><br>
+
+     <%= i.label :listing_date %><br>
+     <%= i.text_field :listing_date %><br>
+
+     <%= i.label :expiration_date %><br>
+     <%= i.text_field :expiration_date %><br>
+
+     <%= i.label :description %><br>
+     <%= i.text_field :description %><br>
+
+     <%= i.label : :avatar %><br>
+     <%= i.file_field : :avatar %><br>
+  
+     <%= i.submit "Add info!" %><br>
+
+<% end %>
+
+    <%= link_to "Back to the list!", items_path %>
+    </div>
+    <div class="large-4 columns">.</div>

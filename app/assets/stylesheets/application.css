@@ -22,6 +22,12 @@
 
 $navbar: RGBA(238, 237, 233, 1);
 
+#map {
+  width: 20%;
+  height:50px;
+  border: 1px dashed fuchsia;
+}
+
  body {
  	background-color: $navbar;
  	  -webkit-font-smoothing: antialiased;

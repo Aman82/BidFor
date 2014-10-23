@@ -1,2 +1,27 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+
+<div class="large-4 columns">.
+</div>
+<div class="large-4 columns">
+<h1>Edit Item info.</h1>
+<%= form_for @car do |f| %>
+        <%= f.label :item_name %> 
+        <%= f.text_field :item_name %>
+        <%= f.label :item_status %>
+         <%= f.text_field :item_status %>
+        <%= f.label :asking_price %> 
+        <%= f.text_field :asking_price %>
+        <%= f.label :notify_price %> 
+         <%= f.text_field :notify_price %>
+        <%= f.label :listing_date %> 
+        <%= f.text_field :listing_date %>
+        <%= f.label :expiration_date %>  
+        <%= f.text_field :expiration_date %>
+        <%= f.label :description %>  
+        <%= f.text_field :description %>
+
+    <%= f.submit "Edit Item details!" %>      
+    
+<% end %>
+</div>
+</div>
+<%= link_to "Back to the list!", items_path %>

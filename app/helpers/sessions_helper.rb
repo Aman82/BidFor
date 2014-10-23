@@ -2,10 +2,10 @@ module SessionsHelper
 
     ################################
     # current_user returns 
-    #    a User object from MongoDB
+    #    a User object from Postgresql
     ################################
 
-    # If not already set, retrieve user from MongoDB
+    # If not already set, retrieve user from Postgresql
     def current_user
         # Test if cookie exists
         if cookies[:user_id] 

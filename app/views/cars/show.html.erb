@@ -2,7 +2,6 @@
 
     <div class="show">
     <h1>Car Details!</h1>    
-    <p><%= image_tag @user.avatar.url(:thumb) %></p>   
     <div class="table-responsive">
     <table class="table table-hover">
         <tr class="info">
@@ -17,6 +16,7 @@
               <th></th>
         </tr>
         <tr class="active">
+            <p><%= image_tag @car.avatar.url(:thumb) %></p> 
             <td><%= @car.make %></td>
             <td><%= @car.model %></td>
             <td><%= @car.year %></td>
@@ -25,6 +25,7 @@
             <td><%= @car.transmission %></td>
             <td><%= @car.color %></td>
             <td><%= @car.title %></td>
+            <td><%= link_to "Edit", edit_car_path(@cars) %> </td>  
             <td> <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
         </tr>
