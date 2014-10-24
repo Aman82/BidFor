@@ -15,15 +15,6 @@ users = User.create([
     email_confirmation: 'alex@ga.com',
     password: 'alexeverything',
     password_confirmation: 'alexeverything'
-  },
-  {
-    first_name: 'Dan',
-    last_name: 'Wilhem',
-    username: 'DanDan',
-    email: 'dan@ga.com',
-    email_confirmation: 'dan@ga.com',
-    password: 'daneverything',
-    password_confirmation: 'daneverything'
   }
   ]);
 
