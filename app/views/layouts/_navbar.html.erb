@@ -46,7 +46,7 @@
                                 <%= f.password_field :password, placeholder: 'Password', required:"", id: "password" %>
                                 <small class="error">Enter your password.</small>
                             </div>
-                            <%= f.submit "Sign In!", class: "button"%>  <%= link_to "New User!", 'users/new' %>||<%= link_to "Forget Password", 'forget/index' %>
+                            <%= f.submit "Sign In!", class: "button"%>  <%= link_to "New User!", 'users/new' %>   <%= link_to "(forgot password)", new_password_reset_path %>
                             <% end %>
                         </div>
                     </li><% end %>
@@ -54,13 +54,15 @@
                         <a>Menu +</a>
                         <ul class="dropdown">
                             <li class="active">
-                            <%= link_to "Checkout Cars", cars_path %></li>
+                            <%= link_to "Auction Cars", cars_path %></li>
+                            <li class="active">
+                            <%= link_to "Classified", items_path %></li>
 
                             <!--  -->
 
                             <li class="active"><%= link_to "Opinion Poll", root_path %></li>
 
-                            <li class="active"><%= link_to "About Us", polls_path %></li>
+                            <li class="active"><%= link_to "Contact Us", contactus_path %></li>
                         </ul>
                     </li>
                 </ul>

@@ -12,21 +12,21 @@
     
   <body>
     <div class="large-12 columns">
-    <script src="http://d3js.org/d3.v3.min.js"></script>
         <div class="fixed">
           <%= render 'layouts/navbar.html.erb' %>
         </div>
-          <% if flash[:notice] %>
-            <p>
-            <%= flash[:notice] %>
-            </p>
-          <% end %>
-          <%= yield %>
-    </div>
-  </body>
-    <footer class="row">
-          <hr/>
+            <% if flash[:notice] %>
+              <p>
+              <%= flash[:notice] %>
+              </p>
+            <% end %>
+            <%= yield %>
+     </div>
+  
+    <footer>
         <%= render 'layouts/footer.html.erb' %>
-      </div>
     </footer>
+  </body>
 </html>
+
+      <!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->

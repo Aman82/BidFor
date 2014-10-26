@@ -1,19 +1,16 @@
-   <h1>Items!</h1>
-    <div class="table-responsive">
-      <table class="table table-hover">
-          <tr class="active">
-               <p><%= image_tag @item.avatar.url(:thumb) %></p>
-              <td><%= @item.itemname %></td>
-              <td><%= @item.item_status %></td>
-              <td><%= @item.asking_price %></td>
-              <td><%= @item.notify_price %></td>
-               <td><%= @item.listing_date %></td>
-              <td><%= @item.expiration_date %></td>
-              <td><%= @item.description %></td>
-              <td><%= @item.avatar %></td>
-            <td><%= link_to "Edit", edit_item_path(@item) %>     </td>      
-            <td><%= link_to "Delete", @item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-     </table>
+   <h1>Items Details!</h1>
+   
+          <div class="active">
+               <p><%= image_tag @item.avatar.url(:medium) %></p>
+              <strong>Item:</strong><%= @item.item_name %><br />
+              <strong>Status:</strong> <%= @item.item_status %><br />
+              <strong>Asking Price:</strong> $ <%= @item.asking_price %><br />
+              <strong>Notify Price:</strong> $ <%= @item.notify_price %><br />
+              <strong>Listed On:</strong> <%= @item.listing_date %><br />
+              <strong>Expiration On:</strong><%= @item.expiration_date %><br />
+              <strong>Description:</strong> <%= @item.description %><br />
+            <%= link_to "Edit", edit_item_path(@item) %>     <br />      
+            <%= link_to "Delete", @item, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+
 <%= link_to "Back to the list!", items_path %> 
     </div>

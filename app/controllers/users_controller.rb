@@ -35,4 +35,9 @@ class UsersController < ApplicationController
       render @user
     end
   end
+
+  def forgetPassword
+    redirect_to forgetPassword_path
+  end
+
 end

@@ -25,7 +25,7 @@
             <td><%= @car.transmission %></td>
             <td><%= @car.color %></td>
             <td><%= @car.title %></td>
-            <td><%= link_to "Edit", edit_car_path(@cars) %> </td>  
+   
             <td> <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>
         </tr>
