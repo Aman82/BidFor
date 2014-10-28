@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
-  root 'polls#index'
+  root 'bids#index'
   get 'contactus/index'
   get 'forget/index'
 

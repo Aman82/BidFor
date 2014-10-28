@@ -1,5 +1,5 @@
-
-
+   <div class="row">
+          <div class="medium- medium-4 columns">
     <div class="show">
     <h1>Car Details!</h1>    
     <div class="table-responsive">
@@ -16,7 +16,7 @@
               <th></th>
         </tr>
         <tr class="active">
-            <p><%= image_tag @car.avatar.url(:thumb) %></p> 
+            <p><%= image_tag @car.avatar.url(:medium) %></p> 
             <td><%= @car.make %></td>
             <td><%= @car.model %></td>
             <td><%= @car.year %></td>
@@ -33,5 +33,6 @@
 
     </div>
 </div>
-              
+  </div>
+</div>      
            <%= link_to "Back to the list!", cars_path %>  

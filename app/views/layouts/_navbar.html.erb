@@ -1,14 +1,15 @@
 <nav class="top-bar" data-topbar role="navigation" data-options="is_hover: false">
       <ul class="title-area">
+      <!-- Logo with RootLink -->
         <li class="name">
-          <h1> <%= link_to "Bid-For", root_path %></h1>
+        <%= link_to(image_tag("../assets/logo.png", :alt => "logo", :title=> "Home", :width=>"45%", :height=>"auto"), "/") %>
         </li>
         <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a>
         </li>
       </ul>
 
     <section class="top-bar-section">
-      <!-- Right Nav Section -->
+      <!-- Signin & Logout Functionality -->
  				<ul class="right">
                     <% if current_user %>
 
@@ -54,22 +55,17 @@
                         <a>Menu +</a>
                         <ul class="dropdown">
                             <li class="active">
+                            <%= link_to "Classified", items_path %></li>
+                            <li class="active">
                             <%= link_to "Auction Cars", cars_path %></li>
                             <li class="active">
-                            <%= link_to "Classified", items_path %></li>
-
-                            <!--  -->
-
-                            <li class="active"><%= link_to "Opinion Poll", root_path %></li>
-
-                            <li class="active"><%= link_to "Contact Us", contactus_path %></li>
+                            <%= link_to "Opinion Poll", polls_path %></li>
+                            <li class="active">
+                            <%= link_to "Contact Us", contactus_path %></li>
+                            <li class="active">
+                            <%= link_to "About Us", 'contactus#about' %></li>
                         </ul>
                     </li>
                 </ul>
-
-    <!-- Left Nav Section -->
-    <ul class="left">
-     <li><a href="http://pollmakers.com/loadvb.wr?Keyword=Opinion_Polls&AdGroup=Surveys&Matchtype=EXACT&GoogleID=13693758163&gclid=CjwKEAjw2MOhBRCq-Nr87_j-lDASJAAl4FNhMKS2qYCjTkmF-4BsA7N5AdmWQEVrBdlTCutNdzQbBxoC_Uzw_wcB">How it Works</a></li>
-    </ul>
   </section>
 </nav>

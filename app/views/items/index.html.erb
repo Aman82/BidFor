@@ -1,9 +1,11 @@
-  <div id="container">
+<div id="container">
+ <div class="row">
+  <div class="large- large-6 columns">
 
 <div><%= link_to "Register for new item", new_item_path %></div>
     
 <div class="show">
-    <h1>Items!</h1>       
+    <h1>Current Items!</h1>       
     <div class="table-responsive">
     <table class="table table-hover">
         <tr class="info">
@@ -13,7 +15,6 @@
               <th>Notify</th>
               <th>Listing_On</th>
               <th>Expiration_On</th>
-              <th>Description</th>
         </tr>
 
       <% @items.each do |i| %>
@@ -21,11 +22,10 @@
         <tr class="active">
             <td><%= i.item_name %></td>
             <td><%= i.item_status %></td>
-            <td><%= i.asking_price %></td>
-            <td><%= i.notify_price %></td>
+            <td>$<%= i.asking_price %></td>
+            <td>$<%= i.notify_price %></td>
             <td><%= i.listing_date %></td>
             <td><%= i.expiration_date %></td>
-            <td><%= i.description %></td>
             <td><%= link_to "Show", item_path(i) %></td>
             <td><%= link_to "Edit", edit_item_path(i) %>     </td>      
             <td><%= link_to "Delete", i, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -36,4 +36,6 @@
    </div>
 
     </div>
+</div>
+</div>
 </div>
