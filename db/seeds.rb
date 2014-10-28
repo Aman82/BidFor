@@ -8,13 +8,13 @@
 
 users = User.create([
   {
-    first_name: 'Alex',
-    last_name: 'Dubelko',
-    username: 'Thor',
-    email: 'alex@ga.com',
-    email_confirmation: 'alex@ga.com',
-    password: 'alexeverything',
-    password_confirmation: 'alexeverything'
+    first_name: 'Aman',
+    last_name: 'Dhillon',
+    username: 'Lion',
+    email: 'aman@ga.com',
+    email_confirmation: 'aman@ga.com',
+    password: 'amaneverything',
+    password_confirmation: 'amaneverything'
   }
   ]);
 
