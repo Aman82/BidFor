@@ -15,3 +15,33 @@
  *= require foundation_and_overrides
 
  */
+
+
+ @import url(https://fonts.googleapis.com/css?family=Pacifico);
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700|Maven+Pro:400,500,700,900|Pontano+Sans);
+
+$navbar: RGBA(238, 237, 233, 1);
+
+ body {
+ 	background-color: $navbar;
+ 	  -webkit-font-smoothing: antialiased;
+ }
+
+
+ .top-bar {
+ 	background: RGBA(48, 56, 64, 1);
+ 	box-shadow: 0px 10px 23px -18px rgba(0,0,0,0.95);
+ }
+
+
+
+#footer {
+	width:100%;
+	height:180px;
+	/*position:relative;*/
+	bottom:0;
+	left:0;
+/*	background:red;*/
+}
+
+
