@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  root 'bids#index'
   
   resources :sallers
   resources :sales
