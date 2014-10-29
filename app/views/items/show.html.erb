@@ -1,20 +1,41 @@
    <div class="row">
           <div class="medium- medium-4 columns">  
    <h1>Items Details!</h1>
-   
-          <div class="active">
-               <p><%= image_tag @item.avatar.url(:medium) %></p>
-              <strong>Item:</strong><%= @item.item_name %><br />
-              <strong>Status:</strong> <%= @item.item_status %><br />
-              <strong>Asking Price:</strong> $ <%= @item.asking_price %><br />
-              <strong>Notify Price:</strong> $ <%= @item.notify_price %><br />
-              <strong>Listed On:</strong> <%= @item.listing_date %><br />
-              <strong>Expiration On:</strong><%= @item.expiration_date %><br />
-              <strong>Description:</strong> <%= @item.description %><br />
-            <%= link_to "Edit", edit_item_path(@item) %>     <br />      
-            <%= link_to "Delete", @item, method: :delete, data: { confirm: 'Are you sure?' } %><br />
+   <div class="active">
+           <p><%= image_tag @item.avatar.url(:medium) %></p>
+          <strong>Id:</strong><%= @item.id %><br />
+          <strong>Item:</strong><%= @item.item_name %><br />
+          <strong>Status:</strong> <%= @item.item_status %><br />
+          <strong>Asking Price:</strong> $ <%= @item.asking_price %><br />
+          <strong>Notify Price:</strong> $ <%= @item.notify_price %><br />
+          <strong>Listed On:</strong> <%= @item.listing_date %><br />
+          <strong>Expiration On:</strong><%= @item.expiration_date %><br />
+          <strong>Description:</strong> <%= @item.description %><br />
+        <br />
+    </div>
+    </div>
 
-<%= link_to "Back to the list!", items_path %> 
+   <br /> <br/>
+      <div class="medium- medium-8 columns">
+    
+
+    <div id="row">
+    <%= form_for @bid do |f| %>
+
+      <%= f.text_field :auction_uniq_id %>
+       <%= @item.id %>
+
+       <%= f.label :bid_amount %>
+       <%= f.text_field :bid_amount %>
+
+     <%= f.submit "Bid!" %>
+    
+
+<% end %>
     </div>
-    </div>
+    <%= link_to "Back to the list!", items_path %> 
+  <h1><%= link_to 'Bid For This Item', bid_path(@item.id) %></h1>
+  <%= link_to "Edit", edit_item_path(@item) %>     <br />      
+  <%= link_to "Delete", @item, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
 </div>

@@ -17,7 +17,7 @@ respond_to :html, :json
   end
  
   def create
-     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :colour, :title, :avatar))
+     @car = Car.new(params.require(:car).permit(:make, :model, :year, :trim, :mileage, :price, :transmission, :color, :title, :avatar))
      if @car.save
           redirect_to @car
      else

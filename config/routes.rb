@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-  get 'password_resets/new'
 
-  get 'password_resets/edit'
 
   root 'bids#index'
   get 'contactus/index'
   get 'forget/index'
-
+  get 'password_resets/new'
+  get 'password_resets/edit'
+  
   resources :sallers
   resources :sales
   resources :bids

@@ -1,7 +1,5 @@
 class AddAvatarToItems < ActiveRecord::Migration
-  def change
-  end
-      def self.up
+  def self.up
     add_attachment :items, :avatar
   end
 

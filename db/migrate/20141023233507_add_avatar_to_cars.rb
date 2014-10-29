@@ -1,7 +1,5 @@
 class AddAvatarToCars < ActiveRecord::Migration
-  def change
-  end
-      def self.up
+  def self.up
     add_attachment :cars, :avatar
   end
 

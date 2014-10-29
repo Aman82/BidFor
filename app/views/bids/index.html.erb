@@ -1,6 +1,33 @@
 <br />
 <div class="row"> 
 <div class="large-4 small-12 columns">
+
+<h1>Listing biddings</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Auction uniq</th>
+
+  </tr>
+
+<% @bids.each do |b| %>
+  <tr>
+    <td><%= b.name %></td>
+    <td><%= b.price %></td>
+    <td><%= b.auction_uniq_id %></td>
+    <td><%= link_to 'Show', b %></td>
+    <td><%= link_to 'Edit', edit_bid_path(b) %></td>
+    <td><%= link_to 'Destroy', b, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to 'New Bid', new_bid_path %>
+
+
+
+
 <img src="../assets/bid-logo.png">
 <div class="hide-for-small panel">
 <h3>Header</h3>
@@ -14,89 +41,88 @@
 <div class="large-8 columns">
 <div class="row">
 
-
 <div class="large-4 small-6 columns">
 <img src="../assets/camera.jpeg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>Camera</h5>
+<h5>Camera</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$767.36</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/macbook.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>MacBook</h5>
+<h5>MacBook</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$1699.99</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/bowl.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>Salad-Bowl</h5>
+<h5>Salad-Bowl</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$15.00</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/map.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>LA Map</h5>
+<h5>LA Map</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$9.99</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/bowl.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>Salad-Bowl</h5>
+<h5>Salad-Bowl</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$15.00</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/camera.jpeg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>Camera</h5>
+<h5>Camera</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$767.36</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/macbook.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>MacBook</h5>
+<h5>MacBook</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$1699.99</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/map.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>LA Map</h5>
+<h5>LA Map</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$9.99</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/coffee-cup.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>coffee-cup</h5>
+<h5>coffee-cup</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$15.00</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
-<img src="../assets/camaro.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
+<img src="../assets/typewriter.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>2014 Chevi Camaro</h5>
-<h6 class="subheader">$16500.00</h6>
+<h5>Antique Typewriter</h5><%= link_to 'Bid Now', new_bid_path %>
+<h6 class="subheader">$999.99</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
 <img src="../assets/coffee-cup.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>coffee-cup</h5>
+<h5>coffee-cup</h5><%= link_to 'Bid Now', new_bid_path %>
 <h6 class="subheader">$15.00</h6>
 </div>
 </div>
 <div class="large-4 small-6 columns">
-<img src="../assets/camaro.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
+<img src="../assets/typewriter.jpg" alt="nail_art_contest-2a" width="100%" height="auto">
 <div class="panel">
-<h5>2014 Chevi Camaro</h5>
-<h6 class="subheader">$16500.00</h6>
+<h5>Antique Typewriter</h5><%= link_to 'Bid Now', new_bid_path %>
+<h6 class="subheader">$999.99</h6>
 </div>
 </div>
 </div>

@@ -1,2 +1,50 @@
-<h1>Bids#show</h1>
-<p>Find me in app/views/bids/show.html.erb</p>
+<div class="row"> 
+<div class="large-4 small-12 columns">
+<p id="notice"><%= notice %></p>
+
+
+<%= form_for(@item) do |f| %>
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@item.errors.count, "error") %> prohibited this bid from being saved:</h2>
+
+      <ul>
+      <% @item.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= f.label :id %><br />
+    <%= f.text_field :id %>
+  </div>
+  <div class="field">
+    <%= f.label :item_name %><br />
+    <%= f.text_field :item_name %>
+  </div>
+</div>
+  <div class="field">
+    <%= f.label :notify_price %><br />
+    <%= f.number_field :notify_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<p>
+  <b>Price:</b>
+  <%= @item.item_name%>
+</p>
+
+<p>
+  <b>Auction uniq:</b>
+</p>
+
+
+<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<%= link_to 'Back', items_path %>
+
+</div>
+</div>

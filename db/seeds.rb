@@ -9,7 +9,7 @@
 users = User.create([
   {
     first_name: 'Aman',
-    last_name: 'Dhillon',
+    last_name: 'jot',
     username: 'Lion',
     email: 'aman@ga.com',
     email_confirmation: 'aman@ga.com',

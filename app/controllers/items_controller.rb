@@ -1,13 +1,16 @@
 class ItemsController < ApplicationController
   def index
+    #@bid = Bid.new
     @items = Item.all
   end
 
   def new
+     @bid = Bid.new
     @item = Item.new
   end
 
   def show
+     @bid = Bid.new
     @item = Item.find(params[:id])
   end
 
