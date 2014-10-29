@@ -36,9 +36,12 @@ gem 'passenger'
 # Foundation Looks More Professional
 gem 'foundation-rails'
 
-# For Paperclip
+# For Paperclip - adding images to users, items & cars
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk'
+
+# For Stripe - payment method for bids
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
 gem 'oauth', '~> 0.4.7'
 

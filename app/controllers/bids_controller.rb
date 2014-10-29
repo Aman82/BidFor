@@ -45,9 +45,10 @@ class BidsController < ApplicationController
   # POST /bids
   # POST /bids.json
   def create
-   
+   @item = Item.find_by(id: params[:auction_uniq_id])
     @bid = Bid.new(params.require(:bid).permit(:auction_uniq_id, :bid_amount))
-
+    @item.notify_price = @bid.bid_amount
+    @item.save
     respond_to do |format|
       if @bid.save
         format.html { redirect_to @bid, notice: 'Bid was successfully created.' }

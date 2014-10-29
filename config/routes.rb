@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
 
-
-  root 'bids#index'
-  get 'contactus/index'
-  get 'forget/index'
-  get 'password_resets/new'
-  get 'password_resets/edit'
   
   resources :sallers
   resources :sales
@@ -14,7 +8,8 @@ Rails.application.routes.draw do
   resources :users
   resources :cars
   resources :polls 
-  resources :contactus 
+  resources :contactus
+  resources :charges 
 resources :password_resets,     only: [:new, :create, :edit, :update]
 
   resources :polls do
