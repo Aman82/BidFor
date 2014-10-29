@@ -5,7 +5,7 @@
 <h1>Edit Item info.</h1>
 <%= form_for @car do |f| %>
         <%= f.label :item_name %> 
-        <%= f.text_field :item_name %>
+        <%= f.text_field :item_name, class: 'form-control', autofocus:true  %>
         <%= f.label :item_status %>
          <%= f.text_field :item_status %>
         <%= f.label :asking_price %> 

@@ -40,6 +40,9 @@ gem 'foundation-rails'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk'
 
+# adding this gem to help ENV file for paperclip
+gem "figaro"
+
 # For Stripe - payment method for bids
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 

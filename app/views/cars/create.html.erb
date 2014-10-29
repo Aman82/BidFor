@@ -5,7 +5,7 @@
 <%= form_for @car do |c| %>
 
      <%= c.label :make %><br>
-     <%= c.text_field :make %><br>
+     <%= c.text_field :make, class: 'form-control', autofocus:true  %><br>
 
      <%= c.label :model %><br>
      <%= c.text_field :model %><br>

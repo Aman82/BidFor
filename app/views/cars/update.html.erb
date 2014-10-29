@@ -1,7 +1,7 @@
 <h1>Update car info</h1>
 
 <%= form_for @car do |f| %>
-        Make: <br><%= f.text_field :make %><br>
+        Make: <br><%= f.text_field :make, class: 'form-control', autofocus:true  %><br>
         Model: <br><%= f.text_field :model %><br>
         Year: <br><%= f.text_field :year %><br>
         Trim: <br><%= f.text_field :trim %><br>
