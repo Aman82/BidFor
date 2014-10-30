@@ -15,7 +15,7 @@
      <%= f.label :password %>
      <%= f.password_field :password %>
 
-     <%= f.label :password_confirmation %><%= @user.erroes.messages[:password].join(", ") %>
+     <%= f.label :password_confirmation %><%= @user.errors.messages[:password].join(", ") %>
      <%= f.password_field :password_confirmation , class: 'form-control' %>
 
     <%= f.label : upload your picture %>
