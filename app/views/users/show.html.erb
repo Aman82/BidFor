@@ -8,7 +8,7 @@
               <th></th>
           </tr>
           <tr class="active">
-              
+              <p><%= image_tag @user.avatar.url(:medium) %></p> 
               <td><%= @user.username %></td>
               <td><%= @user.first_name %></td>
               <td><%= @user.last_name %></td>

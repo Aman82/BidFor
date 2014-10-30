@@ -1,7 +1,7 @@
    <div class="row">
           <div class="medium- medium-6 columns">  
    <h1>Items Details!</h1>
-    
+          <p><%= image_tag @item.avatar.url(:medium) %></p> 
           <strong>Id:</strong><%= @item.id %><br />
           <strong>Item:</strong><%= @item.item_name %><br />
           <strong>Status:</strong> <%= @item.item_status %><br />

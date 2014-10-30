@@ -1,7 +1,7 @@
    <div class="row">
       <div class="medium- medium-6 columns">
       <h1>Car Details!</h1>    
-        
+               <p><%= image_tag @car.avatar.url(:medium) %></p> 
                <strong>Make:</strong><%= @car.make %><br />
                <strong>Model:</strong><%= @car.model %><br />
                <strong>Year:</strong><%= @car.year %><br />
