@@ -10,15 +10,15 @@ class User < ActiveRecord::Base
 
   has_attached_file :avatar, 
       :styles => { :medium => "300x300>", :thumb => "100x100>" },
-      :storage => :s3,
-      :bucket  => ENV['MY_BUCKET_NAME'],
+      # :storage => :s3,
+      # :bucket  => ENV['MY_BUCKET_NAME'],
       :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
   # REGULAR VALIDATOR
   validates_presence_of :first_name, :last_name, :email, :email_confirmation
 
   # EMAIL VALIDATOR
-  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
+  #validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
 
   # PASSWORD VALIDATORS
   validates_length_of :password, :minimum => 5

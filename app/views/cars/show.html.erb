@@ -1,38 +1,20 @@
    <div class="row">
-          <div class="medium- medium-4 columns">
-    <div class="show">
-    <h1>Car Details!</h1>    
-    <div class="table-responsive">
-    <table class="table table-hover">
-        <tr class="info">
-              <th>Make </th>
-              <th>Model</th>
-              <th>Year</th>
-              <th>Trim</th>
-              <th>Mileage</th>
-              <th>Transmission</th>
-              <th>Color</th>
-              <th>Title</th>
-              <th></th>
-        </tr>
-        <tr class="active">
-            <p><%= image_tag @car.avatar.url(:medium) %></p> 
-            <td><%= @car.make %></td>
-            <td><%= @car.model %></td>
-            <td><%= @car.year %></td>
-            <td><%= @car.trim %></td>
-            <td><%= @car.mileage %></td>
-            <td><%= @car.transmission %></td>
-            <td><%= @car.color %></td>
-            <td><%= @car.title %></td>
-   
-            <td> <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %>
-            </td>
-        </tr>
-   </table>
-
-    </div>
-</div>
+      <div class="medium- medium-6 columns">
+      <h1>Car Details!</h1>    
+        
+               <strong>Make:</strong><%= @car.make %><br />
+               <strong>Model:</strong><%= @car.model %><br />
+               <strong>Year:</strong><%= @car.year %><br />
+               <strong>Trim:</strong><%= @car.trim %><br />
+               <strong>Mileage:</strong><%= @car.mileage %><br />
+               <strong>Transmission:</strong><%= @car.transmission %><br />
+               <strong>Color:</strong><%= @car.color %><br />
+               <strong>Title:</strong><%= @car.title %><br /><br />
+                <!--   <%= link_to "Delete this car!", @car, method: :delete, data: { confirm: 'Are you sure?' } %> -->
+       </div>
+  <div class="medium- medium-6 columns">
+    <br /> <br/><br /> <br />
+    <h1><%= link_to 'Bid On This Item', bid_path(@car.id) %></h1>    
+    <%= link_to "Back to the list!", cars_path %>  
   </div>
-</div>      
-           <%= link_to "Back to the list!", cars_path %>  
+</div>

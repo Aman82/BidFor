@@ -1,9 +1,9 @@
    <div class="row">
-          <div class="medium- medium-4 columns">
-<div><%= link_to "Register New Car", new_car_path %></div>
+          <div class="medium- medium-12 columns">
+<div><h3><%= link_to "Add New Car", new_car_path %></h3></div>
     
 <div class="show">
-    <h2>Cars For Auction!</h2>       
+    <h3>Cars For Auction!</h3>       
     <div class="table-responsive">
     <table class="table table-hover">
         <tr class="info">
@@ -31,9 +31,9 @@
             <td><%= c.transmission %></td>
             <td><%= c.color %></td>
             <td><%= c.title %></td>
-            <td><%= link_to "Show", car_path(c) %></td>
-            <td><%= link_to "Edit", edit_car_path(c) %>     </td>      
-            <td><%= link_to "Delete", c, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to "Details", car_path(c) %></td>
+    <!--         <td><%= link_to "Edit", edit_car_path(c) %>     </td>      
+            <td><%= link_to "Delete", c, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
         </tr>
    
  <% end %>

@@ -16,35 +16,26 @@
     </div>
   <% end %>
 
- <div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
-  </div>
+<p>
+  <b>Item ID:</b><%= @item.id%>
+</p>
+<p>
+  <b>Item Name:</b><%= @item.item_name%>
+</p>
+<p>
+  <b>Description:</b><%= @item.description%>
+</p>
   <div class="field">
-    <%= f.label :item_name %><br />
-    <%= f.text_field :item_name %>
-  </div>
-</div>
-  <div class="field">
-    <%= f.label :notify_price %><br />
+    <b>Current Bid: </b>
     <%= f.number_field :notify_price %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
-<p>
-  <b>Price:</b>
-  <%= @item.item_name%>
-</p>
 
-<p>
-  <b>Auction uniq:</b>
-</p>
-
-
-<%= link_to 'Edit', edit_bid_path(@bid) %> |
+<!-- <%= link_to 'Edit', edit_bid_path(@bid) %> | -->
 <%= link_to 'Back', items_path %>
 
-</div>
 </div>
